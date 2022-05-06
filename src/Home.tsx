@@ -69,6 +69,7 @@ const ConnectButton = styled(WalletMultiButton)`
   padding: 6px 16px;
   background-color: #4E44CE;
   margin: 0 auto;
+  font-family: inherit;
 `;
 
 const NFT = styled(Paper)`
@@ -163,13 +164,13 @@ const Price = styled(Chip)`
   margin: 5px;
   font-weight: bold;
   font-size: 1.2em !important;
-  font-family: 'Patrick Hand', cursive !important;
+  font-family: 'Orbitron', sans-serif !important;
 `;
 
 const Image = styled.img`
   height: 400px;
   width: auto;
-  border-radius: 7px;
+  border-radius: 10px;
   box-shadow: 5px 5px 40px 5px rgba(0,0,0,0.5);
 `;
 
@@ -381,8 +382,8 @@ const Home = (props: HomeProps) => {
 
     function throwConfetti(): void {
         confetti({
-            particleCount: 400,
-            spread: 70,
+            particleCount: 500,
+            spread: 100,
             origin: {y: 0.6},
         });
     }
@@ -575,8 +576,8 @@ const Home = (props: HomeProps) => {
     ]);
 
     return (
-        <main>
-            <MainContainer>
+        <main className="body-wrap">
+            <MainContainer className="mainContainer">
                 <WalletContainer>
                     <Wallet>
                         {wallet ?
@@ -588,11 +589,11 @@ const Home = (props: HomeProps) => {
                 <MintContainer>
                     <DesContainer>
                         <NFT elevation={3}>
-                            <h2>My NFT</h2>
+                            <h2>Mint Some Martians</h2>
                             <br/>
                             <div><Price
                                 label={isActive && whitelistEnabled && (whitelistTokenBalance > 0) ? (whitelistPrice + " " + priceLabel) : (price + " " + priceLabel)}/><Image
-                                src="cool-cats.gif"
+                                src="./martians.gif"
                                 alt="NFT To Mint"/></div>
                             <br/>
                             {wallet && isActive && whitelistEnabled && (whitelistTokenBalance > 0) && isBurnToken &&

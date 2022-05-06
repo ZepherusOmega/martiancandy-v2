@@ -1,27 +1,47 @@
 /* Customize your main colors in :root variables */
 :root {
   --main-background-color: #343A50;
-  --card-background-color: #804980;
-  --countdown-background-color: #433765;
+  --card-background-color: #292229;
+  --countdown-background-color: #1F2024;
   --main-text-color:#F7F6F4;
-  --title-text-color:#3CBA8B;
+  --title-text-color:#51c32a;
 }
 
 body{
 /*  background-color:var(--main-background-color);*/
   background: url("img/background.png");
   background-size: cover;
-  font-family: 'Patrick Hand', cursive;
+  font-family: 'Orbitron', sans-serif;
   font-size: 1.1em;
 }
 
 h2, p{
-  color: var(--main-text-color);
+  color: var(--title-text-color);
 }
 
 h3{
 font-weight: normal;
 }
 
+.body-wrap {
+  position: relative;
+  /* overflow: hidden; */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  /* @media screen and (max-width: 350px) {
+    flex-direction: column;
+    flex: 1 0 auto;
+  }    */
+}
+
+.mainContainer {
+  
+}
+
+.walletContainer {}
+
+.mintContainer {}
 
 
