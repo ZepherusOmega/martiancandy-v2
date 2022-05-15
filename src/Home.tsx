@@ -590,6 +590,7 @@ const Home = (props: HomeProps) => {
                     <DesContainer>
                         <NFT elevation={3}>
                             <h2>Mint Some Martians</h2>
+                            <p>Price displayed once wallet is connected</p>
                             <br/>
                             <div><Price
                                 label={isActive && whitelistEnabled && (whitelistTokenBalance > 0) ? (whitelistPrice + " " + priceLabel) : (price + " " + priceLabel)}/><Image
